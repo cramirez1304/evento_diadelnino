@@ -1,0 +1,46 @@
+body {
+	background: url(../img/pattern-2.jpg) repeat #dce1e4;
+	/* font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	color: #444751; */
+	/* line-height: 1.6em; */
+	/* text-: 0px 1px 0px #ffffff; */
+}
+
+.numeros{
+    color:#C49E0D;
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+.azul{
+    color:#1E2080;
+}
+.tinto{
+    color:#832D40;
+}
+.gold{
+    color:#C49E0D;
+}
+.gold a{
+    color:#C49E0D;
+}
+.confondo{
+    color:white;
+    background-color: #1E2080;
+}
+.textoazul{
+    color:#082F82;
+
+}
+.footer{
+    /* padding: 10px 10px 10px 0px; */
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 0px;
+    padding-left: 30px;
+    color: #fff;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(94,15,62,1) 55%, rgba(127,128,129,1) 88%);
+}
