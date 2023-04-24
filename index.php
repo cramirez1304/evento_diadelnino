@@ -14,6 +14,29 @@ require ('conexion.php');
     $row = $resultado->fetch_row();
     //echo "SUMA:".$row[0];
     $suma = $row[0];
+    if($suma < 1){
+        $suma = 0;
+    }
+
+    $iquery = "SELECT sum(cant) from incidencias";
+    //$query = "select sum(Id) from `asistencia1`";
+	$iresultado=$mysqli->query($iquery);
+    $irow = $iresultado->fetch_row();
+    //echo "SUMA:".$row[0];
+    $isuma = $irow[0];
+    if($isuma < 1){
+        $isuma = 0;
+    }
+    //echo $isuma;
+
+    $squery = "SELECT count(cant) from incidencias";
+    //$query = "select sum(Id) from `asistencia1`";
+	$sresultado=$mysqli->query($squery);
+    $srow = $sresultado->fetch_row();
+    //echo "SUMA:".$row[0];
+    $scount = $srow[0];
+    //echo $scount;
+
 
 ?>
 <!DOCTYPE html>
@@ -40,11 +63,11 @@ require ('conexion.php');
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 text-center">
+            <div class="col-md-4 text-center">
                 <div class="card" style="">
                     <div class="card-body">
                         <div class="alert alert-primary" role="alert">
-                            <p class="fs-1">
+                            <p class="fs-3">
                                 Registros (CURP): <br> 
                                 <span class="badge rounded-pill text-bg-primary">
                                 <strong><?php echo $registros ?></strong>
@@ -53,22 +76,90 @@ require ('conexion.php');
                         </div>
                     </div>
                 </div> 
-                
+            </div>
+            
+            <div class="col-md-4 text-center">
                 <div class="card" style="">
                     <div class="card-body">
-                        <div class="alert alert-danger" role="alert">
-                            <p class="fs-1">
-                                Vales entregados: <br>
-                                <span class="badge rounded-pill text-bg-danger">
-                                <strong><?php echo $suma ?></strong>  
-                                </span>  
+                        <div class="alert alert-primary" role="alert">
+                            <p class="fs-3">
+                                Incidencias (CURP): <br> 
+                                <span class="badge rounded-pill text-bg-primary">
+                                <strong><?php echo $scount; ?></strong>
+                                </span> 
                             </p>
                         </div>
                     </div>
-                </div> 
-                
+                </div>  
             </div>
+
+            <div class="col-md-4 text-center">
+                <div class="card" style="">
+                    <div class="card-body">
+                        <div class="alert alert-primary" role="alert">
+                            <p class="fs-3">
+                                Total registros (CURP): <br> 
+                                <span class="badge rounded-pill text-bg-primary">
+                                <strong><?php echo $registros+$scount; ?></strong>
+                                </span> 
+                            </p>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+
         </div>
+
+
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <div class="card" style="">
+                        <div class="card-body">
+                            <div class="alert alert-danger" role="alert">
+                                <p class="fs-3">
+                                    Vales entregados: <br>
+                                    <span class="badge rounded-pill text-bg-danger">
+                                    <strong><?php echo $suma ?></strong>  
+                                    </span>  
+                                </p>
+                            </div>
+                        </div>
+                </div> 
+            </div>
+
+            <div class="col-md-4 text-center">
+                <div class="card" style="">
+                        <div class="card-body">
+                            <div class="alert alert-danger" role="alert">
+                                <p class="fs-3">
+                                    Vales entregados: <br>
+                                    <span class="badge rounded-pill text-bg-danger">
+                                    <strong><?php echo $isuma ?></strong>  
+                                    </span>  
+                                </p>
+                            </div>
+                        </div>
+                </div> 
+            </div>
+
+            <div class="col-md-4 text-center">
+                <div class="card" style="">
+                        <div class="card-body">
+                            <div class="alert alert-danger" role="alert">
+                                <p class="fs-3">
+                                    Total entregados: <br>
+                                    <span class="badge rounded-pill text-bg-danger">
+                                    <strong><?php echo $suma+$isuma ?></strong>  
+                                    </span>  
+                                </p>
+                            </div>
+                        </div>
+                </div> 
+            </div>
+
+        </div>
+
+
     </div>
     <script>
   //Cuando la página esté cargada completamente
