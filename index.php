@@ -132,7 +132,7 @@ require ('conexion.php');
                         <div class="card-body">
                             <div class="alert alert-danger" role="alert">
                                 <p class="fs-3">
-                                    Vales entregados: <br>
+                                    Vales por incidencias: <br>
                                     <span class="badge rounded-pill text-bg-danger">
                                     <strong><?php echo $isuma ?></strong>  
                                     </span>  

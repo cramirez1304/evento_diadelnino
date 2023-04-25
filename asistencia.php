@@ -141,7 +141,7 @@ function valideKey(evt){
 									}
 								echo "<span class='badge badge-warning'><strong style='font-size:48px;'>".$row['hijos']."</strong> ".$vale."</span>";
 								echo ' - ';
-								echo $row['nombre'];
+								echo str_replace('?', 'Ñ', $row['nombre']);
 								}
 						
 							if(isset($_GET['repetido'])){

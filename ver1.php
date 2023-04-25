@@ -20,7 +20,7 @@ $recup = "SELECT a.Fecha as a_Fecha, a.Folio, r.Id, r.nombre, r.area, r.hijos, r
         ?>
         <tr>
             <td><?php echo $row['Id'] ?></td>
-            <td><?php echo $row['nombre']?></td>
+            <td><?php echo str_replace('?', 'Ñ', $row['nombre'])?></td>
             <td><?php echo $row['curp'] ?></td>
             <td><?php
             echo $row['cct']

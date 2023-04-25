@@ -73,7 +73,7 @@ require ('conexion.php');
         </form>
 
         <?php
-        $query = "SELECT * FROM `incidencias`";
+        $query = "SELECT * FROM `incidencias` order by curp asc";
         $resultado=$mysqli->query($query);
         ?>
         <div class="row">
