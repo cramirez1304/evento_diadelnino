@@ -13,7 +13,7 @@
 <meta name="description" content="business corporate landing page" />
 <meta name="keywords" content="business, corporate, marketing, seo, app landing page, software landing page, app page, registration form, login page, template" />
 <meta name="author" content="Tansh" />
-<title>SEPyC</title>
+<title>ASISTENCIA</title>
 <link rel="shortcut icon" href="img/sinaloa.png" type="image/png" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
